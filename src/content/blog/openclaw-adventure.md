@@ -2,7 +2,7 @@
 title: 'I Gave an AI Agent Full Access to My Life — It Refused to Turn Off'
 description: 'A story about excitement, security paranoia, and migrating an AI assistant to the cloud at 2 AM.'
 pubDate: 'Feb 28 2026'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: '../../assets/blog-hero-openclaw.png'
 ---
 
 Ever had that moment where you see something so cool that your brain just short-circuits and goes: *"I need this. Right now. On my personal computer. What could go wrong?"*
