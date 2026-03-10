@@ -1993,9 +1993,12 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 				background: white;
 				border: 1px solid rgb(var(--gray-light));
 				border-radius: 10px;
-				padding: 0.75em 1em;
-				margin-bottom: 0.5em;
+				padding: 0.5em 0.75em;
+				margin-bottom: 0.35em;
 				transition: all 0.2s;
+				display: flex;
+				align-items: center;
+				gap: 0.75em;
 			}
 
 			.card:hover {
@@ -2010,19 +2013,35 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 			.num {
 				font-weight: 700;
 				color: var(--accent);
-				font-size: 0.85em;
+				font-size: 0.8em;
+				white-space: nowrap;
+				flex-shrink: 0;
+				min-width: 2.2em;
 			}
 
 			.card p {
-				margin: 0.3em 0 0.5em;
-				line-height: 1.5;
-				font-size: 0.95em;
+				margin: 0;
+				line-height: 1.4;
+				font-size: 0.9em;
+				flex: 1;
 			}
 
 			.tags {
 				display: flex;
-				gap: 0.3em;
+				gap: 0.25em;
 				flex-wrap: wrap;
+				flex-shrink: 0;
+				justify-content: flex-end;
+			}
+
+			@media (max-width: 720px) {
+				.card {
+					flex-wrap: wrap;
+				}
+				.tags {
+					width: 100%;
+					justify-content: flex-start;
+				}
 			}
 
 			.badge {
