@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompta Anatomija — LV</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0f0f11;
+    --surface: #18181c;
+    --border: #2a2a30;
+
+    --c-persona:   #f97316;
+    --c-konteksts: #22d3ee;
+    --c-uzdevums:  #a78bfa;
+    --c-formats:   #34d399;
+    --c-specifisks:#f472b6;
+
+    --bg-persona:   rgba(249,115,22,  0.12);
+    --bg-konteksts: rgba(34, 211,238, 0.12);
+    --bg-uzdevums:  rgba(167,139,250, 0.12);
+    --bg-formats:   rgba(52, 211,153, 0.12);
+    --bg-specifisks:rgba(244,114,182, 0.12);
+  }
+
+  body {
+    background: var(--bg);
+    color: #e8e8ee;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    gap: 48px;
+  }
+
+  header { text-align: center; }
+
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: -0.02em;
+    color: #fff;
+    line-height: 1.1;
+  }
+
+  header p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #888;
+    font-weight: 300;
+  }
+
+  /* ── VERSION BADGE ───────────────────────────────────── */
+  .badge {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #a78bfa;
+    background: rgba(167,139,250,0.12);
+    border-radius: 999px;
+    padding: 4px 12px;
+  }
+
+  /* ── PROMPT BOX ─────────────────────────────────────── */
+  .prompt-wrap {
+    width: 100%;
+    max-width: 820px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 36px;
+  }
+
+  .prompt-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 18px;
+  }
+
+  .prompt-text {
+    font-family: 'DM Mono', monospace;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    line-height: 1.9;
+    color: #ccc;
+  }
+
+  .p { color: var(--c-persona);   background: var(--bg-persona);   }
+  .k { color: var(--c-konteksts); background: var(--bg-konteksts); }
+  .u { color: var(--c-uzdevums);  background: var(--bg-uzdevums);  }
+  .f { color: var(--c-formats);   background: var(--bg-formats);   }
+  .s { color: var(--c-specifisks);background: var(--bg-specifisks);}
+
+  .p, .k, .u, .f, .s {
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-weight: 500;
+    cursor: default;
+    transition: opacity 0.15s;
+  }
+
+  /* hover dims everything else */
+  .prompt-text:has(.p:hover) .k,
+  .prompt-text:has(.p:hover) .u,
+  .prompt-text:has(.p:hover) .f,
+  .prompt-text:has(.p:hover) .s { opacity: 0.2; }
+
+  .prompt-text:has(.k:hover) .p,
+  .prompt-text:has(.k:hover) .u,
+  .prompt-text:has(.k:hover) .f,
+  .prompt-text:has(.k:hover) .s { opacity: 0.2; }
+
+  .prompt-text:has(.u:hover) .p,
+  .prompt-text:has(.u:hover) .k,
+  .prompt-text:has(.u:hover) .f,
+  .prompt-text:has(.u:hover) .s { opacity: 0.2; }
+
+  .prompt-text:has(.f:hover) .p,
+  .prompt-text:has(.f:hover) .k,
+  .prompt-text:has(.f:hover) .u,
+  .prompt-text:has(.f:hover) .s { opacity: 0.2; }
+
+  .prompt-text:has(.s:hover) .p,
+  .prompt-text:has(.s:hover) .k,
+  .prompt-text:has(.s:hover) .u,
+  .prompt-text:has(.s:hover) .f { opacity: 0.2; }
+
+  /* ── LEGEND ─────────────────────────────────────────── */
+  .legend {
+    width: 100%;
+    max-width: 820px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+  }
+
+  .legend-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.18s, border-color 0.18s;
+  }
+
+  .legend-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    border-radius: 12px 0 0 12px;
+  }
+
+  .legend-item.lp::before { background: var(--c-persona); }
+  .legend-item.lk::before { background: var(--c-konteksts); }
+  .legend-item.lu::before { background: var(--c-uzdevums); }
+  .legend-item.lf::before { background: var(--c-formats); }
+  .legend-item.ls::before { background: var(--c-specifisks); }
+
+  .legend-item:hover { transform: translateY(-2px); }
+  .legend-item.lp:hover { border-color: var(--c-persona); }
+  .legend-item.lk:hover { border-color: var(--c-konteksts); }
+  .legend-item.lu:hover { border-color: var(--c-uzdevums); }
+  .legend-item.lf:hover { border-color: var(--c-formats); }
+  .legend-item.ls:hover { border-color: var(--c-specifisks); }
+
+  .legend-tag {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .lp .legend-tag { color: var(--c-persona); }
+  .lk .legend-tag { color: var(--c-konteksts); }
+  .lu .legend-tag { color: var(--c-uzdevums); }
+  .lf .legend-tag { color: var(--c-formats); }
+  .ls .legend-tag { color: var(--c-specifisks); }
+
+  .legend-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e8e8ee;
+  }
+
+  .legend-desc {
+    font-size: 0.82rem;
+    color: #888;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  .legend-example {
+    margin-top: 6px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+
+  .lp .legend-example { color: var(--c-persona);   background: var(--bg-persona); }
+  .lk .legend-example { color: var(--c-konteksts); background: var(--bg-konteksts); }
+  .lu .legend-example { color: var(--c-uzdevums);  background: var(--bg-uzdevums); }
+  .lf .legend-example { color: var(--c-formats);   background: var(--bg-formats); }
+  .ls .legend-example { color: var(--c-specifisks);background: var(--bg-specifisks); }
+
+  /* ── FORMULA BAR ────────────────────────────────────── */
+  .formula {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 6px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formula-chip {
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .formula-chip.p { color: var(--c-persona);   background: var(--bg-persona); }
+  .formula-chip.k { color: var(--c-konteksts); background: var(--bg-konteksts); }
+  .formula-chip.u { color: var(--c-uzdevums);  background: var(--bg-uzdevums); }
+  .formula-chip.f { color: var(--c-formats);   background: var(--bg-formats); }
+  .formula-chip.s { color: var(--c-specifisks);background: var(--bg-specifisks); }
+
+  .plus { color: #444; font-size: 1rem; }
+
+  /* ── COPY BUTTON ────────────────────────────────────── */
+  .prompt-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  .prompt-label { margin-bottom: 0; }
+
+  .copy-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    color: #666;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    letter-spacing: 0.03em;
+  }
+
+  .copy-btn:hover {
+    background: rgba(255,255,255,0.09);
+    border-color: #444;
+    color: #aaa;
+  }
+
+  .copy-btn.copied {
+    border-color: #34d399;
+    color: #34d399;
+    background: rgba(52,211,153,0.08);
+  }
+
+  .copy-btn svg { flex-shrink: 0; }
+
+  footer {
+    font-size: 0.75rem;
+    color: #444;
+    text-align: center;
+  }
+
+  /* ── MOBILE ─────────────────────────────────────────── */
+  @media (max-width: 600px) {
+    body {
+      padding: 24px 12px;
+      gap: 28px;
+    }
+
+    .prompt-wrap {
+      padding: 20px 16px;
+    }
+
+    .prompt-text {
+      line-height: 2.1;
+    }
+
+    .legend {
+      grid-template-columns: 1fr;
+    }
+
+    .formula {
+      gap: 6px 4px;
+    }
+
+    .formula-chip {
+      font-size: 0.68rem;
+      padding: 4px 10px;
+    }
+
+    header p {
+      font-size: 0.85rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Prompta Anatomija</h1>
+  <div class="badge">v2 · Latviešu valodā</div>
+  <p>Novieto peli uz krāsainajiem blokiem, lai redzētu katras daļas lomu</p>
+</header>
+
+<!-- FORMULA -->
+<div class="formula">
+  <span class="formula-chip p">Persona</span>
+  <span class="plus">+</span>
+  <span class="formula-chip k">Galvenais konteksts</span>
+  <span class="plus">+</span>
+  <span class="formula-chip u">Uzdevums</span>
+  <span class="plus">+</span>
+  <span class="formula-chip f">Formāts</span>
+  <span class="plus">+</span>
+  <span class="formula-chip s">Specifiskas detaļas</span>
+</div>
+
+<!-- PROMPT -->
+<div class="prompt-wrap">
+  <div class="prompt-header">
+    <div class="prompt-label">Prompts</div>
+    <button class="copy-btn" id="copyBtn" onclick="copyPrompt()">
+      <svg id="copyIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+      </svg>
+      <span id="copyLabel">Kopēt</span>
+    </button>
+  </div>
+  <div class="prompt-text" id="promptText">
+    <span class="p">Esi profesionāls LinkedIn satura eksperts.</span>
+    <span class="u"> Uzraksti aizraujošu LinkedIn ierakstu</span>
+    <span class="k"> par [Tēma] auditorijai [Mērķauditorija].</span>
+    <span class="f"> Tonis — [Profesionāls / Sarunvalodas / Iedvesmojošs].</span>
+    <span class="s"> Sāc ar spēcīgu ievadu,
+    dalies ar personīgu pieredzi vai galveno atziņu,
+    un iekļauj praktiskus padomus.</span>
+    <span class="f"> Apjoms — līdz 150 vārdiem, sarakstu formātā.</span>
+    <span class="s"> Pabeidz ar jautājumu, lai mudinātu komentēt.</span>
+  </div>
+</div>
+
+<script>
+  function copyPrompt() {
+    const text = document.getElementById('promptText').innerText.replace(/\s+/g, ' ').trim();
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('copyBtn');
+      const label = document.getElementById('copyLabel');
+      const icon = document.getElementById('copyIcon');
+      btn.classList.add('copied');
+      label.textContent = 'Nokopēts!';
+      icon.innerHTML = '<polyline points="20 6 9 17 4 12"/>';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        label.textContent = 'Kopēt';
+        icon.innerHTML = '<rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>';
+      }, 2000);
+    });
+  }
+</script>
+
+<!-- LEGEND -->
+<div class="legend">
+
+  <div class="legend-item lp">
+    <span class="legend-tag">01 · Persona</span>
+    <span class="legend-title">Kāda ir AI loma?</span>
+    <span class="legend-desc">Nosaka AI lomu, pieredzi un skatupunktu - tas izmaina veidu kā AI atbildēs.</span>
+    <span class="legend-example">"Esi profesionāls LinkedIn satura eksperts."</span>
+  </div>
+
+  <div class="legend-item lk">
+    <span class="legend-tag">02 · Galvenais konteksts</span>
+    <span class="legend-title">Par ko un kam?</span>
+    <span class="legend-desc">Definē tēmu un mērķauditoriju. Šī ir galvenā prompta daļa, kura personalizē atbildi tieši priekš Tevis.</span>
+    <span class="legend-example">"par [Tēma] auditorijai [Mērķauditorija]"</span>
+  </div>
+
+  <div class="legend-item lu">
+    <span class="legend-tag">03 · Uzdevums</span>
+    <span class="legend-title">Ko darīt?</span>
+    <span class="legend-desc">Skaidri nosaka, kāds ir uzdevums. Viens uzdevums = viens prompts.</span>
+    <span class="legend-example">"Uzraksti aizraujošu LinkedIn ierakstu"</span>
+  </div>
+
+  <div class="legend-item lf">
+    <span class="legend-tag">04 · Formāts</span>
+    <span class="legend-title">Kā izskatās rezultāts?</span>
+    <span class="legend-desc">Garums, struktūra, tonis, vizuālais izkārtojums. Bez formāta AI izvēlas pats.</span>
+    <span class="legend-example">"Tonis — [X]. Apjoms — līdz 150 vārdiem, sarakstu formātā."</span>
+  </div>
+
+  <div class="legend-item ls">
+    <span class="legend-tag">05 · Specifiskas detaļas</span>
+    <span class="legend-title">Kādas nianses?</span>
+    <span class="legend-desc">Sīkākas nianses, kas padara rezultātu precīzu un izmantojamu tieši tev.</span>
+    <span class="legend-example">"Sāc ar spēcīgu ievadu. Pabeidz ar jautājumu."</span>
+  </div>
+
+</div>
+
+<footer>Criss · AI & Automatizācija</footer>
+
+</body>
+</html>
