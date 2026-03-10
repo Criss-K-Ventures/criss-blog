@@ -1,0 +1,2120 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+const title = "300 AI Use Cases for Everyday People, Workers & Business Owners";
+const description = "A comprehensive collection of 300 practical AI use cases you can try right now — from cooking to coding, finance to fitness, and everything in between.";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body>
+		<Header />
+		<main class="use-cases-page">
+			<div class="hero">
+				<h1>300 AI Use Cases</h1>
+				<p class="subtitle">for Everyday People, Workers & Business Owners</p>
+				<p class="intro">
+					Every use case below works <strong>right now</strong> with existing tools — ChatGPT, Claude, Gemini, Midjourney, DALL·E, ElevenLabs, Suno, Runway, Cursor, Replit, and dozens of other ready-made platforms. No custom model training required.
+				</p>
+			</div>
+
+			<div class="ai-type-key">
+				<h3>AI Type Key</h3>
+				<div class="type-badges">
+					<span class="badge badge-llm">LLM</span> Large Language Model (ChatGPT, Claude, Gemini)
+					<span class="badge badge-image">Image AI</span> Image generators/editors
+					<span class="badge badge-voice">Voice AI</span> Voice synthesis/recognition
+					<span class="badge badge-video">Video AI</span> Video generation/editing
+					<span class="badge badge-music">Music AI</span> Music/audio generation
+					<span class="badge badge-code">Code AI</span> AI coding tools
+					<span class="badge badge-search">Search AI</span> AI-powered search
+					<span class="badge badge-auto">Automation AI</span> Workflow automation
+				</div>
+			</div>
+
+			<div class="controls">
+				<input type="text" id="search" placeholder="🔍 Search use cases..." autocomplete="off" />
+				<div class="filter-row">
+					<button class="filter-btn active" data-filter="all">All (300)</button>
+					<button class="filter-btn" data-filter="llm">LLM</button>
+					<button class="filter-btn" data-filter="image">Image AI</button>
+					<button class="filter-btn" data-filter="voice">Voice AI</button>
+					<button class="filter-btn" data-filter="video">Video AI</button>
+					<button class="filter-btn" data-filter="music">Music AI</button>
+					<button class="filter-btn" data-filter="code">Code AI</button>
+					<button class="filter-btn" data-filter="search">Search AI</button>
+					<button class="filter-btn" data-filter="auto">Automation AI</button>
+				</div>
+			</div>
+
+			<div class="category-nav">
+				<strong>Jump to:</strong>
+				<a href="#home">🏠 Home</a>
+				<a href="#parenting">👨‍👩‍👧‍👦 Parenting</a>
+				<a href="#pets">🐾 Pets</a>
+				<a href="#travel">✈️ Travel</a>
+				<a href="#shopping">🛒 Shopping</a>
+				<a href="#relationships">💬 Relationships</a>
+				<a href="#learning">📚 Learning</a>
+				<a href="#communication">✉️ Communication</a>
+				<a href="#health">💪 Health</a>
+				<a href="#finance">💰 Finance</a>
+				<a href="#creative">🎨 Creative</a>
+				<a href="#content">📱 Content</a>
+				<a href="#design">🎨 Design</a>
+				<a href="#audio-video">🎬 Audio & Video</a>
+				<a href="#career">💼 Career</a>
+				<a href="#productivity">⚡ Productivity</a>
+				<a href="#business">🏢 Business</a>
+				<a href="#freelance">🤝 Freelance</a>
+				<a href="#marketing">📣 Marketing</a>
+				<a href="#legal-hr">⚖️ Legal & HR</a>
+				<a href="#vibe-coding">💻 Vibe Coding</a>
+				<a href="#automation">🤖 Automation</a>
+				<a href="#emerging">🌍 Emerging</a>
+			</div>
+
+			<div class="results-count" id="results-count"></div>
+
+			<div id="use-cases">
+
+			<!-- HOME & DAILY LIFE -->
+			<section id="home">
+				<h2>🏠 Home & Daily Life</h2>
+
+				<h3>Cooking & Meal Planning</h3>
+				<div class="card" data-tags="llm image" data-num="1">
+					<span class="num">#1</span>
+					<p>Snap a photo of your fridge/pantry contents and get a full week of dinner recipes tailored to dietary restrictions, what you already have, and what's about to expire</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="2">
+					<span class="num">#2</span>
+					<p>Generate a budget-optimized grocery list from your meal plan, organized by store aisle, with cheaper substitutions suggested</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="3">
+					<span class="num">#3</span>
+					<p>Instantly convert recipes between appliances (Instant Pot ↔ air fryer ↔ slow cooker), scale servings, or swap out missing ingredients with what you have on hand</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Home Repair & Maintenance</h3>
+				<div class="card" data-tags="llm image" data-num="4">
+					<span class="num">#4</span>
+					<p>Diagnose household problems by describing symptoms or uploading a photo (ceiling stain, AC noise, running toilet) and get a step-by-step repair guide with difficulty rating and tool list</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="5">
+					<span class="num">#5</span>
+					<p>Generate a year-round preventive home maintenance calendar based on your home's age, location, and climate (HVAC service, gutter cleaning, deck resealing, etc.)</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Cleaning & Organization</h3>
+				<div class="card" data-tags="llm" data-num="6">
+					<span class="num">#6</span>
+					<p>Build a personalized seasonal deep-cleaning checklist with product recommendations matched to your home's surfaces and any allergy sensitivities</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="7">
+					<span class="num">#7</span>
+					<p>Get a custom room-by-room decluttering plan with specific storage solutions based on your space dimensions, lifestyle, and possessions</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm image" data-num="8">
+					<span class="num">#8</span>
+					<p>Photograph or dictate items you own and have AI create a categorized home inventory for insurance, including estimated replacement values</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+
+				<h3>Interior Design</h3>
+				<div class="card" data-tags="image llm" data-num="9">
+					<span class="num">#9</span>
+					<p>Upload a photo of any room and see AI-generated redesigns in dozens of styles (Scandinavian, mid-century, bohemian, industrial) to visualize changes before spending money</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="10">
+					<span class="num">#10</span>
+					<p>Describe your room dimensions, existing furniture, and budget to get a complete décor shopping list with color palette recommendations and specific product suggestions</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Gardening & Lawn Care</h3>
+				<div class="card" data-tags="image llm" data-num="11">
+					<span class="num">#11</span>
+					<p>Snap a photo of an unknown plant, weed, disease spot, or pest and get instant identification with care instructions or treatment advice</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="12">
+					<span class="num">#12</span>
+					<p>Get a personalized planting calendar and garden layout based on your climate zone, soil type, sun exposure, and what you want to grow</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="image llm" data-num="13">
+					<span class="num">#13</span>
+					<p>Upload a photo of brown patches or discoloration in your lawn for a diagnosis with a targeted treatment plan</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Energy & Utilities</h3>
+				<div class="card" data-tags="llm" data-num="14">
+					<span class="num">#14</span>
+					<p>Paste your utility bill into AI and get a prioritized list of specific, actionable ways to reduce energy costs for your home setup</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+			</section>
+
+			<!-- PARENTING & FAMILY -->
+			<section id="parenting">
+				<h2>👨‍👩‍👧‍👦 Parenting & Family</h2>
+
+				<h3>Homework & Education</h3>
+				<div class="card" data-tags="llm" data-num="15">
+					<span class="num">#15</span>
+					<p>Have AI explain tough homework concepts at your child's grade level, then generate custom practice problems with answer keys</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="16">
+					<span class="num">#16</span>
+					<p>Create on-demand study aids — flashcards, mind maps, summary sheets, or interactive "quiz me" sessions for any school subject</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Childcare & Activities</h3>
+				<div class="card" data-tags="llm image" data-num="17">
+					<span class="num">#17</span>
+					<p>Generate personalized bedtime stories starring your child (by name, with their pet and interests) with AI-illustrated pages in a consistent art style</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="18">
+					<span class="num">#18</span>
+					<p>Draft age-appropriate explanations for difficult life topics (death, divorce, bullying, puberty) calibrated to your child's age</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="19">
+					<span class="num">#19</span>
+					<p>Get evidence-based strategies for specific behavioral challenges (tantrums, screen time, sibling rivalry) tailored to your child's age and temperament</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="20">
+					<span class="num">#20</span>
+					<p>Generate custom rainy-day activity packs, scavenger hunts, trivia games, or road trip entertainment personalized to your kids' ages and interests</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="21">
+					<span class="num">#21</span>
+					<p>Plan a full family adventure day with age-appropriate activities, timing, meal stops, and weather backup plans</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+
+				<h3>Baby & Toddler</h3>
+				<div class="card" data-tags="music voice" data-num="22">
+					<span class="num">#22</span>
+					<p>Generate custom lullabies, white noise, or calming soundscapes in your preferred music style to soothe your baby</p>
+					<div class="tags"><span class="badge badge-music">Music AI</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+
+				<h3>Elder Care</h3>
+				<div class="card" data-tags="voice llm" data-num="23">
+					<span class="num">#23</span>
+					<p>Set up voice AI routines for daily check-ins, medication reminders, and companionship for aging parents living alone</p>
+					<div class="tags"><span class="badge badge-voice">Voice AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="24">
+					<span class="num">#24</span>
+					<p>Simplify confusing medical bills, insurance EOBs, government forms, or prescription information into plain, large-print language for elderly parents</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Family Memory-Keeping</h3>
+				<div class="card" data-tags="llm image" data-num="25">
+					<span class="num">#25</span>
+					<p>Create a personalized family photo book, year-in-review newsletter, or holiday card — AI organizes photos, writes captions, and designs the layout</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+
+				<h3>Neurodivergent Support</h3>
+				<div class="card" data-tags="llm image" data-num="26">
+					<span class="num">#26</span>
+					<p>Have AI adapt explanations in real-time for people with ADHD, dyslexia, or autism — restructuring text, creating visual aids, or breaking tasks into micro-steps calibrated to cognitive style</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+			</section>
+
+			<!-- PET CARE -->
+			<section id="pets">
+				<h2>🐾 Pet Care</h2>
+				<div class="card" data-tags="llm" data-num="27">
+					<span class="num">#27</span>
+					<p>Describe your pet's symptoms and get a preliminary triage assessment with urgency rating and guidance on whether to call the vet</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="image llm" data-num="28">
+					<span class="num">#28</span>
+					<p>Upload a photo of a skin bump, rash, or injury on your pet for a visual assessment with possible conditions and next steps</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="29">
+					<span class="num">#29</span>
+					<p>Get a step-by-step positive-reinforcement training plan customized to your pet's breed, age, and specific behavioral issue</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="30">
+					<span class="num">#30</span>
+					<p>Generate a tailored feeding plan with portion sizes, food brand comparisons, and supplement suggestions for your pet's breed, weight, and health conditions</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="image llm" data-num="31">
+					<span class="num">#31</span>
+					<p>Photograph plants in your home or yard and have AI flag any species toxic to your specific pet</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="32">
+					<span class="num">#32</span>
+					<p>Create detailed care instruction sheets for pet sitters covering feeding, medication, behavioral quirks, and emergency info</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+			</section>
+
+			<!-- TRAVEL -->
+			<section id="travel">
+				<h2>✈️ Travel & Transportation</h2>
+				<div class="card" data-tags="llm search" data-num="33">
+					<span class="num">#33</span>
+					<p>Build a detailed day-by-day travel itinerary with budget estimates, restaurant picks, local insider tips, and weather backup plans</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="34">
+					<span class="num">#34</span>
+					<p>Generate an optimized road trip route with scenic stops, kid-friendly rest areas, local food spots, and driving time per segment</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="35">
+					<span class="num">#35</span>
+					<p>Describe your trip constraints (dates, budget, group size) and have AI compare and summarize the best-value flight, hotel, and experience options</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="image voice llm" data-num="36">
+					<span class="num">#36</span>
+					<p>Translate foreign menus, street signs, medication labels, and live conversations in real time using camera or voice AI while abroad</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-voice">Voice AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="37">
+					<span class="num">#37</span>
+					<p>Generate a personalized packing list calibrated to your destination's weather, planned activities, trip duration, and luggage size</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="38">
+					<span class="num">#38</span>
+					<p>Learn essential local customs, tipping etiquette, common scams, safety tips, and useful phrases for any destination in under five minutes</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="39">
+					<span class="num">#39</span>
+					<p>Plan a multi-stop errand or sightseeing route optimized for time and distance to minimize backtracking</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm image" data-num="40">
+					<span class="num">#40</span>
+					<p>Describe a car symptom (dashboard light, strange noise, smell) and get a plain-English diagnosis with estimated repair cost range before visiting a mechanic</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="41">
+					<span class="num">#41</span>
+					<p>Compile all trip confirmations, booking codes, emergency contacts, and embassy info into one organized travel document to share with companions</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+			</section>
+
+			<!-- SHOPPING -->
+			<section id="shopping">
+				<h2>🛒 Shopping & Consumer Decisions</h2>
+				<div class="card" data-tags="llm" data-num="42">
+					<span class="num">#42</span>
+					<p>Paste competing product specs and reviews into AI and get a side-by-side comparison matrix with a "which one to buy" recommendation for your needs</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="43">
+					<span class="num">#43</span>
+					<p>Have AI summarize the consensus across hundreds of product reviews, separating real complaints from one-off issues and flagging suspiciously fake reviews</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="44">
+					<span class="num">#44</span>
+					<p>Get hyper-specific gift suggestions based on the recipient's hobbies, personality, your budget, and relationship — plus where to buy each one</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="45">
+					<span class="num">#45</span>
+					<p>Draft a persuasive complaint or refund request email that cites the company's own policies and relevant consumer rights</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="46">
+					<span class="num">#46</span>
+					<p>Decode confusing product labels, ingredient lists, warranty fine print, or tech specs into plain everyday language</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="47">
+					<span class="num">#47</span>
+					<p>Have AI review a contract, lease, or service agreement and flag hidden fees, auto-renewal traps, and unfavorable terms before you sign</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="48">
+					<span class="num">#48</span>
+					<p>Generate negotiation scripts for better rates on cable, insurance, rent, or subscriptions — including competitor pricing as leverage</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="49">
+					<span class="num">#49</span>
+					<p>Get a "repair vs. replace vs. DIY" cost-benefit analysis for a broken appliance or aging car, including expected remaining lifespan</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+			</section>
+
+			<!-- RELATIONSHIPS -->
+			<section id="relationships">
+				<h2>💬 Relationships & Social</h2>
+				<div class="card" data-tags="llm" data-num="50">
+					<span class="num">#50</span>
+					<p>Write or refine your dating profile with authentic, engaging language that highlights your personality without sounding generic</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="51">
+					<span class="num">#51</span>
+					<p>Generate creative date night ideas tailored to your city, shared interests, season, and budget</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="52">
+					<span class="num">#52</span>
+					<p>Create a complete party plan: theme, menu with recipes, decorations, timeline, games, playlist, and itemized shopping list within a set budget</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="image llm" data-num="53">
+					<span class="num">#53</span>
+					<p>Design custom party invitations, themed decorations, or photo booth prop templates you can print at home</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="54">
+					<span class="num">#54</span>
+					<p>Get guidance on navigating tricky social situations: declining invitations, handling awkward encounters, in-law dynamics, or writing a difficult text</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="55">
+					<span class="num">#55</span>
+					<p>Draft fair, balanced agreements for shared responsibilities — roommate chores, co-parenting schedules, or neighbor disputes — with AI mediating both sides</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="video music image" data-num="56">
+					<span class="num">#56</span>
+					<p>Create a personalized video montage or slideshow for a birthday, anniversary, or retirement with transitions, music, and captions</p>
+					<div class="tags"><span class="badge badge-video">Video AI</span><span class="badge badge-music">Music AI</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="57">
+					<span class="num">#57</span>
+					<p>Get thoughtful, low-cost ways to stay in touch with long-distance friends and family, personalized to shared history</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm image" data-num="58">
+					<span class="num">#58</span>
+					<p>Design a professional-looking neighborhood newsletter, community event flyer, or local group communication without graphic design skills</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+			</section>
+
+			<!-- LEARNING -->
+			<section id="learning">
+				<h2>📚 Learning & Education</h2>
+
+				<h3>Language Learning</h3>
+				<div class="card" data-tags="llm voice" data-num="59">
+					<span class="num">#59</span>
+					<p>Practice conversational skills in any language with AI as a patient partner who adjusts to your level, corrects grammar, and roleplays real scenarios (ordering food, job interviews, doctor visits)</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+				<div class="card" data-tags="voice llm" data-num="60">
+					<span class="num">#60</span>
+					<p>Practice pronunciation in any language or reduce a foreign accent by speaking to voice AI and getting phonetic corrections modeled back</p>
+					<div class="tags"><span class="badge badge-voice">Voice AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Study Skills & Exam Prep</h3>
+				<div class="card" data-tags="llm" data-num="61">
+					<span class="num">#61</span>
+					<p>Turn any textbook chapter, lecture notes, or PDF into flashcards, practice quizzes, and spaced-repetition study schedules tailored to your exam date</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="62">
+					<span class="num">#62</span>
+					<p>Simulate full exam experiences — AI generates realistic practice tests for standardized exams (SAT, GRE, MCAT, bar exam) and grades responses with detailed feedback</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="63">
+					<span class="num">#63</span>
+					<p>Generate practice questions, case studies, and simulated exams from professional materials for certification prep (medical, legal, financial)</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Tutoring & Understanding</h3>
+				<div class="card" data-tags="llm" data-num="64">
+					<span class="num">#64</span>
+					<p>Get step-by-step explanations of any concept at your exact level — ask "explain it like I'm 12" or "now explain it at a college level" until it clicks</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm image" data-num="65">
+					<span class="num">#65</span>
+					<p>Have AI create analogies and visual metaphors for abstract concepts — explain blockchain using a library analogy or quantum physics with everyday objects</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm voice" data-num="66">
+					<span class="num">#66</span>
+					<p>Roleplay as historical figures (Socrates, Marie Curie) for interactive Q&A that makes historical periods viscerally memorable</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+
+				<h3>Research & Academic Writing</h3>
+				<div class="card" data-tags="llm search" data-num="67">
+					<span class="num">#67</span>
+					<p>Upload a dense academic paper and get a plain-language summary, key takeaways, methodology critique, and follow-up questions to explore</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="68">
+					<span class="num">#68</span>
+					<p>Paste a draft essay and get feedback on argument structure, logical fallacies, citation gaps, and tone — without AI rewriting it for you</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Skill Building</h3>
+				<div class="card" data-tags="llm" data-num="69">
+					<span class="num">#69</span>
+					<p>Design a structured multi-week self-study curriculum for any skill (woodworking, photography, public speaking) with milestones and project-based assignments</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="70">
+					<span class="num">#70</span>
+					<p>AI-curated course recommendations across platforms (Coursera, Udemy, Khan Academy) with a suggested learning path based on your goals and skill gaps</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm code" data-num="71">
+					<span class="num">#71</span>
+					<p>Learn to code by building real projects with AI as a pair-programming partner that explains every line and debugs in plain English</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-code">Code AI</span></div>
+				</div>
+
+				<h3>Music Learning</h3>
+				<div class="card" data-tags="llm music" data-num="72">
+					<span class="num">#72</span>
+					<p>Get AI-generated practice exercises for your instrument at your level, have music theory explained, and generate backing tracks for improvisation</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-music">Music AI</span></div>
+				</div>
+
+				<h3>Accessibility & Format Conversion</h3>
+				<div class="card" data-tags="llm voice" data-num="73">
+					<span class="num">#73</span>
+					<p>Convert any learning material into your preferred format — text to audio narration, lecture audio to organized notes, textbooks into simplified versions for different reading levels</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+				<div class="card" data-tags="image llm" data-num="74">
+					<span class="num">#74</span>
+					<p>Generate diagrams, infographics, or visual study aids for any topic (anatomy charts, circuit diagrams, timelines) when you can't find the right image online</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm voice" data-num="75">
+					<span class="num">#75</span>
+					<p>Upload documents to NotebookLM and generate a surprisingly natural-sounding podcast discussion about the content for audio learning</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+			</section>
+
+			<!-- COMMUNICATION -->
+			<section id="communication">
+				<h2>✉️ Communication</h2>
+
+				<h3>Professional Writing</h3>
+				<div class="card" data-tags="llm" data-num="76">
+					<span class="num">#76</span>
+					<p>Draft, rewrite, or tone-adjust professional emails — turn blunt bullet points into polished messages or dial formality up/down for different recipients</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="77">
+					<span class="num">#77</span>
+					<p>Generate tailored cover letters by pasting a job description plus your resume — mapping specific experience to their requirements</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Difficult Conversations</h3>
+				<div class="card" data-tags="llm" data-num="78">
+					<span class="num">#78</span>
+					<p>Generate scripts for tough conversations (asking for a raise, breaking bad news, setting boundaries, confronting someone) with multiple tone options from assertive to empathetic</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm voice" data-num="79">
+					<span class="num">#79</span>
+					<p>Practice tough conversations by roleplaying with AI acting as the other party — rehearse rebuttals, refine your approach, and build confidence before the real thing</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+
+				<h3>Social & Personal Writing</h3>
+				<div class="card" data-tags="llm" data-num="80">
+					<span class="num">#80</span>
+					<p>Write heartfelt messages for situations where words are hardest — condolence letters, wedding toasts, eulogies, thank-you notes, or congratulations that don't sound cookie-cutter</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="81">
+					<span class="num">#81</span>
+					<p>Draft genuine apologies that acknowledge harm, take responsibility, and propose next steps — striking the right balance between over- and under-acknowledging</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Public Speaking</h3>
+				<div class="card" data-tags="llm voice" data-num="82">
+					<span class="num">#82</span>
+					<p>Get feedback on speech drafts for pacing, structure, and engagement — then practice delivery with voice AI analyzing filler words, pace, and clarity</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+
+				<h3>Cross-Cultural Communication</h3>
+				<div class="card" data-tags="llm" data-num="83">
+					<span class="num">#83</span>
+					<p>Translate messages with cultural nuance — not just words but explaining what's culturally appropriate (formality levels, greetings, norms) for your specific audience</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="84">
+					<span class="num">#84</span>
+					<p>Adapt your communication style to professional norms in another country — softening directness for US culture or adding formality for Japanese correspondence</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Meeting & Event Communication</h3>
+				<div class="card" data-tags="llm" data-num="85">
+					<span class="num">#85</span>
+					<p>Generate icebreaker questions, meeting agendas, facilitation scripts, and follow-up email templates for any professional or social gathering</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Presentations</h3>
+				<div class="card" data-tags="llm image" data-num="86">
+					<span class="num">#86</span>
+					<p>Turn a rough outline into a complete slide deck with suggested structure, speaker notes, visual recommendations, and AI-generated graphics</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+			</section>
+
+			<!-- HEALTH -->
+			<section id="health">
+				<h2>💪 Health & Wellness</h2>
+
+				<h3>Fitness</h3>
+				<div class="card" data-tags="llm" data-num="87">
+					<span class="num">#87</span>
+					<p>Generate a personalized multi-week workout plan based on your equipment, fitness level, injuries, time availability, and goals — with exercise substitutions and progression</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm image" data-num="88">
+					<span class="num">#88</span>
+					<p>Create a custom yoga or stretching sequence for your flexibility level and problem areas (desk-worker hips, runner's hamstrings) with pose descriptions and breathing cues</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="89">
+					<span class="num">#89</span>
+					<p>Describe an injury or post-surgery restrictions and get a progressive rehabilitation exercise plan with weekly milestones to discuss with your physical therapist</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Nutrition</h3>
+				<div class="card" data-tags="llm" data-num="90">
+					<span class="num">#90</span>
+					<p>Create a weekly meal plan with recipes and grocery lists tailored to dietary restrictions, budget, calorie targets, and cooking skill level</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="image llm" data-num="91">
+					<span class="num">#91</span>
+					<p>Snap a photo of your meal and get estimated calories, macronutrients, and portion sizes — faster than manually logging each ingredient</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Medical Information</h3>
+				<div class="card" data-tags="llm" data-num="92">
+					<span class="num">#92</span>
+					<p>Upload blood work, MRI results, or other medical reports and get a plain-language explanation of every value, what's flagged, and smart questions to ask your doctor</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="93">
+					<span class="num">#93</span>
+					<p>Describe symptoms in plain language and get possible causes ranked by likelihood, red flags warranting urgent care, and relevant questions for your doctor</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="94">
+					<span class="num">#94</span>
+					<p>Check drug interactions, side effects, timing, and food conflicts for your entire medication list in one conversation</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="95">
+					<span class="num">#95</span>
+					<p>Give AI your symptoms, medical history, and concerns to get a structured one-page summary for your doctor — plus questions to ask so you don't freeze up in the appointment</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Mental Health & Wellbeing</h3>
+				<div class="card" data-tags="llm" data-num="96">
+					<span class="num">#96</span>
+					<p>Use AI as a structured journaling partner — it asks CBT-inspired questions, identifies thought patterns, tracks mood over time, and suggests evidence-based coping strategies</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="voice llm" data-num="97">
+					<span class="num">#97</span>
+					<p>Get guided through evidence-based relaxation exercises (box breathing, progressive muscle relaxation, grounding) in real-time via voice AI</p>
+					<div class="tags"><span class="badge badge-voice">Voice AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="voice llm" data-num="98">
+					<span class="num">#98</span>
+					<p>Generate custom guided meditations tailored to your mood, available time, and experience level — narrated by AI voice</p>
+					<div class="tags"><span class="badge badge-voice">Voice AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="99">
+					<span class="num">#99</span>
+					<p>Use AI for existential exploration — finding life purpose, exploring career meaning, and navigating major life transitions with structured reflection</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Sleep & Habits</h3>
+				<div class="card" data-tags="llm voice music" data-num="100">
+					<span class="num">#100</span>
+					<p>Describe your sleep problems and get a personalized sleep hygiene protocol plus AI-generated calming stories, visualizations, or ambient soundscapes</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-voice">Voice AI</span><span class="badge badge-music">Music AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="101">
+					<span class="num">#101</span>
+					<p>Design a habit-stacking plan where AI maps new habits onto your existing routines, sets micro-goals, and adapts when you fall off track</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="music auto" data-num="102">
+					<span class="num">#102</span>
+					<p>Use adaptive AI soundscapes that adjust in real-time based on your calendar, weather, heart rate, and activity level — beyond static playlists</p>
+					<div class="tags"><span class="badge badge-music">Music AI</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+
+				<h3>Chronic Conditions & First Aid</h3>
+				<div class="card" data-tags="llm" data-num="103">
+					<span class="num">#103</span>
+					<p>Get help managing life with a chronic condition — adapted exercise routines, complex dietary plans (dialysis-friendly, low-FODMAP), and medical jargon translation from specialist visits</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="104">
+					<span class="num">#104</span>
+					<p>Learn proper first aid procedures, build a personalized emergency kit checklist, and create family emergency plans with location-specific risk considerations</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+			</section>
+
+			<!-- FINANCE -->
+			<section id="finance">
+				<h2>💰 Personal Finance</h2>
+				<div class="card" data-tags="llm" data-num="105">
+					<span class="num">#105</span>
+					<p>Create a realistic personal budget from scratch using methods like 50/30/20 or zero-based budgeting, with specific dollar amounts for every category</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="106">
+					<span class="num">#106</span>
+					<p>Upload confusing financial documents (mortgage agreements, 401k statements, insurance policies) and get a plain-English explanation of every section and hidden fee</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="107">
+					<span class="num">#107</span>
+					<p>Input all debts with balances and interest rates, and get a custom payoff plan comparing snowball vs. avalanche methods with timeline and total interest savings</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="108">
+					<span class="num">#108</span>
+					<p>Walk through your tax situation conversationally — identify deductions you're missing (home office, education credits, HSA, charitable giving), and prep for filing</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="109">
+					<span class="num">#109</span>
+					<p>Get any investment concept explained in plain language, compare specific funds or ETFs, or analyze what a market event means for your portfolio</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="110">
+					<span class="num">#110</span>
+					<p>Model different retirement scenarios — "What if I save $500/month now vs. $1,000/month in 5 years?" — with clear projections and actionable steps</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="111">
+					<span class="num">#111</span>
+					<p>Get a framework for comparing insurance options (health, auto, life, disability) — what coverage you need, key terms, and what questions to ask agents</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="112">
+					<span class="num">#112</span>
+					<p>Input your credit situation and get a personalized action plan to improve your score, with steps ranked by impact and timeline</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="113">
+					<span class="num">#113</span>
+					<p>Describe your skills and available time to get ranked side hustle ideas with startup costs, expected earnings, and step-by-step launch plans</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="114">
+					<span class="num">#114</span>
+					<p>Paste your bank statement and have AI categorize transactions, flag forgotten subscriptions, identify spending patterns, and suggest specific cuts</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="115">
+					<span class="num">#115</span>
+					<p>Get analysis of a real estate listing: price comparison to comps, estimated true monthly costs (mortgage + taxes + insurance + maintenance), and questions for your realtor</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="116">
+					<span class="num">#116</span>
+					<p>Turn dry finance topics into interactive learning — scenario-based decision games, investment quizzes, and "what would you do?" money dilemmas</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="117">
+					<span class="num">#117</span>
+					<p>Get plain-language explanations of crypto, DeFi, or emerging asset classes with honest risk assessments and scam red flags</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="118">
+					<span class="num">#118</span>
+					<p>Use AI for major purchase decisions — input priorities, budget, and usage patterns for a comparison matrix with total cost-of-ownership analysis</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+			</section>
+
+			<!-- CREATIVE -->
+			<section id="creative">
+				<h2>🎨 Creative Arts</h2>
+
+				<h3>Writing & Storytelling</h3>
+				<div class="card" data-tags="llm" data-num="119">
+					<span class="num">#119</span>
+					<p>Co-write a novel or short story — brainstorm plot twists, develop character backstories, draft scenes, and push through writer's block</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="120">
+					<span class="num">#120</span>
+					<p>Generate poems in specific forms (sonnets, haiku, free verse) from a theme or emotion, iterating line-by-line until it matches your voice</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm voice" data-num="121">
+					<span class="num">#121</span>
+					<p>Turn personal experiences or family histories into polished narrative essays, memoirs, or oral-history-style audio recordings</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="122">
+					<span class="num">#122</span>
+					<p>Build choose-your-own-adventure stories or interactive text games with branching storylines and outcomes based on reader choices</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="123">
+					<span class="num">#123</span>
+					<p>Reimagine classic public-domain stories in new genres — Shakespeare as sci-fi, a fairy tale as noir thriller</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Visual Art & Design</h3>
+				<div class="card" data-tags="image" data-num="124">
+					<span class="num">#124</span>
+					<p>Generate concept art, character designs, or scene illustrations by describing exactly what you envision — iterate on style, lighting, and composition</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm image" data-num="125">
+					<span class="num">#125</span>
+					<p>Create complete comic book pages with panel layouts, dialogue, and matching illustrations without drawing skills</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="image" data-num="126">
+					<span class="num">#126</span>
+					<p>Transform ordinary photos into stylized artwork — painterly effects, season changes, or composite yourself into imagined settings</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm image voice" data-num="127">
+					<span class="num">#127</span>
+					<p>Design detailed, visually consistent characters with AI-generated portraits, voice samples, and personality profiles for use across projects</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+				<div class="card" data-tags="image llm" data-num="128">
+					<span class="num">#128</span>
+					<p>Describe dreams to image AI to create illustrated "dream journals"</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Music & Audio</h3>
+				<div class="card" data-tags="music" data-num="129">
+					<span class="num">#129</span>
+					<p>Compose full original songs with vocals, instruments, and arrangements by describing a genre, mood, and theme in plain language</p>
+					<div class="tags"><span class="badge badge-music">Music AI</span></div>
+				</div>
+				<div class="card" data-tags="llm music" data-num="130">
+					<span class="num">#130</span>
+					<p>Write original lyrics with AI, then instantly produce a studio-quality demo recording with vocals in your chosen genre</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-music">Music AI</span></div>
+				</div>
+				<div class="card" data-tags="music" data-num="131">
+					<span class="num">#131</span>
+					<p>Create instrumental backing tracks, lo-fi beats, or ambient soundscapes for studying, streaming, or creative work</p>
+					<div class="tags"><span class="badge badge-music">Music AI</span></div>
+				</div>
+				<div class="card" data-tags="music llm" data-num="132">
+					<span class="num">#132</span>
+					<p>Generate catchy songs that explain complex concepts — a surprisingly effective technique for making ideas memorable</p>
+					<div class="tags"><span class="badge badge-music">Music AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Worldbuilding & Games</h3>
+				<div class="card" data-tags="llm image" data-num="133">
+					<span class="num">#133</span>
+					<p>Build richly detailed fictional universes — maps, histories, cultures, magic systems, and faction lore for novels, games, or tabletop RPGs</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm image" data-num="134">
+					<span class="num">#134</span>
+					<p>Prototype video game or board game concepts — rule sets, level designs, enemy types, item descriptions, and visual concept art</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm image" data-num="135">
+					<span class="num">#135</span>
+					<p>Generate entire tabletop RPG campaigns — NPCs with backstories, plot twists, encounter maps, and balanced combat scenarios</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+
+				<h3>Screenwriting & Books</h3>
+				<div class="card" data-tags="llm image" data-num="136">
+					<span class="num">#136</span>
+					<p>Write and structure screenplays or short film scripts with proper formatting and scene breakdowns, then generate storyboard visuals</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm image" data-num="137">
+					<span class="num">#137</span>
+					<p>Create complete children's picture books — write age-appropriate stories and generate matching page-by-page illustrations in a consistent style</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+			</section>
+
+			<!-- CONTENT CREATION -->
+			<section id="content">
+				<h2>📱 Content Creation</h2>
+
+				<h3>Video Content</h3>
+				<div class="card" data-tags="llm" data-num="138">
+					<span class="num">#138</span>
+					<p>Generate complete YouTube scripts with attention-grabbing hooks, timestamped chapters, and CTAs optimized for audience retention</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="139">
+					<span class="num">#139</span>
+					<p>Write scripts for TikToks, Reels, and Shorts with pattern-interrupt hooks and precise timing for 15–60 second videos</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="image llm" data-num="140">
+					<span class="num">#140</span>
+					<p>Generate eye-catching video thumbnails by describing the emotion, composition, and text overlay you want — test multiple variations</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Written Content</h3>
+				<div class="card" data-tags="llm search" data-num="141">
+					<span class="num">#141</span>
+					<p>Research keywords and generate SEO-optimized long-form blog posts with headers, internal linking suggestions, and meta descriptions</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="142">
+					<span class="num">#142</span>
+					<p>Write and structure complete newsletter issues — subject line through sign-off — matched to your brand voice</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="143">
+					<span class="num">#143</span>
+					<p>Draft full email marketing sequences (welcome, launch, re-engagement, abandoned cart) with subject line variations and A/B test suggestions</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm image" data-num="144">
+					<span class="num">#144</span>
+					<p>Create downloadable lead magnets — ebooks, checklists, templates, how-to guides — formatted and ready to share</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="145">
+					<span class="num">#145</span>
+					<p>Write compelling product descriptions and landing page copy that highlights benefits and handles objections naturally</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Podcast Content</h3>
+				<div class="card" data-tags="llm search" data-num="146">
+					<span class="num">#146</span>
+					<p>Generate episode outlines with talking points, guest research briefs, interview questions, and segment ideas from just a topic or guest name</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm auto" data-num="147">
+					<span class="num">#147</span>
+					<p>Upload audio and auto-generate timestamped show notes, key takeaways, pull quotes, and a searchable transcript</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+
+				<h3>Content Strategy</h3>
+				<div class="card" data-tags="llm" data-num="148">
+					<span class="num">#148</span>
+					<p>Build a full month's content calendar across platforms with post ideas, captions, hashtag sets, and optimal posting schedules</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm auto" data-num="149">
+					<span class="num">#149</span>
+					<p>Turn one piece of content into ten formats: blog post → tweet thread, LinkedIn carousel, Instagram caption, email excerpt, and short video script</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="150">
+					<span class="num">#150</span>
+					<p>Scan trending topics and content gaps in your niche, then auto-generate content briefs with outlines and angle suggestions</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="151">
+					<span class="num">#151</span>
+					<p>Generate dozens of headline variations, email subject lines, and opening hooks for A/B testing</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Community & Engagement</h3>
+				<div class="card" data-tags="llm" data-num="152">
+					<span class="num">#152</span>
+					<p>Generate discussion prompts, poll questions, quizzes, and engagement-driving posts for online communities or Discord servers</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="153">
+					<span class="num">#153</span>
+					<p>Translate and culturally adapt content into multiple languages while preserving tone and brand voice</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="154">
+					<span class="num">#154</span>
+					<p>Turn data and research into structured infographic copy — stat callouts, flow sequences, and explanatory blurbs ready for design</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+			</section>
+
+			<!-- DESIGN -->
+			<section id="design">
+				<h2>🎨 Design & Visual</h2>
+
+				<h3>Brand & Identity</h3>
+				<div class="card" data-tags="image llm" data-num="155">
+					<span class="num">#155</span>
+					<p>Create logo concepts and full brand identity kits — color palettes, font pairings, brand marks, and style guides — from a brand personality description</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="image llm" data-num="156">
+					<span class="num">#156</span>
+					<p>Build visual mood boards by describing an aesthetic or creative direction — iterate on style, palette, and composition with AI-generated references</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Social & Marketing Graphics</h3>
+				<div class="card" data-tags="image llm" data-num="157">
+					<span class="num">#157</span>
+					<p>Design scroll-stopping social media graphics, quote cards, and carousel posts in your brand's visual style without design software</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="image llm" data-num="158">
+					<span class="num">#158</span>
+					<p>Design cohesive event collateral — invitations, programs, signage, social banners, and name badges — from a single theme description</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Photo Editing & Manipulation</h3>
+				<div class="card" data-tags="image" data-num="159">
+					<span class="num">#159</span>
+					<p>Restore old or damaged photos, remove unwanted objects, upscale low-resolution images, and auto-correct lighting and color</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="image" data-num="160">
+					<span class="num">#160</span>
+					<p>Extend photo backgrounds beyond the original frame, swap skies, change seasons, or composite elements from different images</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span></div>
+				</div>
+
+				<h3>Product & E-commerce</h3>
+				<div class="card" data-tags="image" data-num="161">
+					<span class="num">#161</span>
+					<p>Generate photorealistic product mockups — see your design on t-shirts, packaging, devices, or in lifestyle settings — without a photographer</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="image" data-num="162">
+					<span class="num">#162</span>
+					<p>Create print-on-demand merchandise artwork for t-shirts, mugs, stickers, and posters — generate original designs and visualize on products</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span></div>
+				</div>
+
+				<h3>Specialized Design</h3>
+				<div class="card" data-tags="llm code image" data-num="163">
+					<span class="num">#163</span>
+					<p>Describe an app or website idea and get a clickable prototype with layouts, navigation, and realistic UI components</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-code">Code AI</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="image" data-num="164">
+					<span class="num">#164</span>
+					<p>Create photorealistic architectural visualizations and interior design concepts from text descriptions or rough sketches</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="image" data-num="165">
+					<span class="num">#165</span>
+					<p>Design clothing concepts, textile patterns, and outfit combinations — visualize on models for portfolios or e-commerce</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="image" data-num="166">
+					<span class="num">#166</span>
+					<p>Generate seamless tileable patterns and textures for fabrics, wallpapers, packaging, or digital backgrounds</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="image" data-num="167">
+					<span class="num">#167</span>
+					<p>Create custom icon sets and vector-style illustrations matched to your brand for websites, apps, or presentations</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="image llm" data-num="168">
+					<span class="num">#168</span>
+					<p>Design professional book or ebook covers exploring different genres, moods, and typography treatments</p>
+					<div class="tags"><span class="badge badge-image">Image AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm code image" data-num="169">
+					<span class="num">#169</span>
+					<p>Turn raw data into clear chart concepts, dashboard layouts, and annotated graphics for reports or social posts</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-code">Code AI</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+			</section>
+
+			<!-- AUDIO & VIDEO -->
+			<section id="audio-video">
+				<h2>🎬 Audio & Video Production</h2>
+
+				<h3>Voice & Narration</h3>
+				<div class="card" data-tags="voice" data-num="170">
+					<span class="num">#170</span>
+					<p>Produce professional voiceovers for videos, ads, or tutorials — choose from thousands of AI voices, accents, and languages</p>
+					<div class="tags"><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+				<div class="card" data-tags="voice llm" data-num="171">
+					<span class="num">#171</span>
+					<p>Turn a manuscript into a full audiobook with expressive narration — auto-detect characters and assign unique voices</p>
+					<div class="tags"><span class="badge badge-voice">Voice AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="voice" data-num="172">
+					<span class="num">#172</span>
+					<p>Clone your own voice (with consent) to narrate unlimited content consistently — fix mistakes or add segments from text without re-recording</p>
+					<div class="tags"><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+				<div class="card" data-tags="voice video" data-num="173">
+					<span class="num">#173</span>
+					<p>Dub videos or podcasts into dozens of languages while preserving your original voice, delivery, and lip-sync timing</p>
+					<div class="tags"><span class="badge badge-voice">Voice AI</span><span class="badge badge-video">Video AI</span></div>
+				</div>
+
+				<h3>Video Creation</h3>
+				<div class="card" data-tags="video" data-num="174">
+					<span class="num">#174</span>
+					<p>Create short cinematic video clips from text descriptions — product shots, atmospheric B-roll, or narrative scenes — without camera or crew</p>
+					<div class="tags"><span class="badge badge-video">Video AI</span></div>
+				</div>
+				<div class="card" data-tags="video voice" data-num="175">
+					<span class="num">#175</span>
+					<p>Create talking-head presenter videos with a realistic AI avatar delivering your script — for courses, demos, or content without being on camera</p>
+					<div class="tags"><span class="badge badge-video">Video AI</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+				<div class="card" data-tags="video voice llm" data-num="176">
+					<span class="num">#176</span>
+					<p>Create animated explainer videos — describe a concept and generate illustrated motion segments with narration and transitions</p>
+					<div class="tags"><span class="badge badge-video">Video AI</span><span class="badge badge-voice">Voice AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Audio Production</h3>
+				<div class="card" data-tags="music" data-num="177">
+					<span class="num">#177</span>
+					<p>Generate original background music for videos, podcasts, or streams — specify genre, mood, tempo, and duration</p>
+					<div class="tags"><span class="badge badge-music">Music AI</span></div>
+				</div>
+				<div class="card" data-tags="music voice" data-num="178">
+					<span class="num">#178</span>
+					<p>Create custom sound effects on demand — describe any sound and generate it instantly for use in any project</p>
+					<div class="tags"><span class="badge badge-music">Music AI</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+				<div class="card" data-tags="music voice auto" data-num="179">
+					<span class="num">#179</span>
+					<p>Produce complete podcast episodes — generate intro/outro music, clean audio, remove background noise, and insert chapter markers</p>
+					<div class="tags"><span class="badge badge-music">Music AI</span><span class="badge badge-voice">Voice AI</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+
+				<h3>Editing & Post-Production</h3>
+				<div class="card" data-tags="llm auto" data-num="180">
+					<span class="num">#180</span>
+					<p>Auto-generate accurate, timestamped subtitles and multilingual captions for any video or audio file in platform-ready formats</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+				<div class="card" data-tags="auto voice" data-num="181">
+					<span class="num">#181</span>
+					<p>Edit video and podcast audio by editing a transcript — delete words to cut footage, rearrange sections by moving text, remove filler words</p>
+					<div class="tags"><span class="badge badge-auto">Automation AI</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+			</section>
+
+			<!-- CAREER -->
+			<section id="career">
+				<h2>💼 Work & Career</h2>
+
+				<h3>Job Search</h3>
+				<div class="card" data-tags="llm" data-num="182">
+					<span class="num">#182</span>
+					<p>Tailor resume bullet points for each job application by pasting the job description and having AI rewrite to match exact keywords and priorities</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="183">
+					<span class="num">#183</span>
+					<p>Reverse-engineer any job posting to identify hidden "must-haves" vs. "nice-to-haves" so you know which requirements to prioritize</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="184">
+					<span class="num">#184</span>
+					<p>Rewrite your LinkedIn headline, About section, and experience bullets to rank higher in recruiter searches</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Interview Preparation</h3>
+				<div class="card" data-tags="llm voice" data-num="185">
+					<span class="num">#185</span>
+					<p>Run mock interviews where AI plays the interviewer for your specific role, company, and seniority level — get scored feedback on clarity and storytelling</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="186">
+					<span class="num">#186</span>
+					<p>Research interviewer backgrounds and generate a briefing card: likely focus areas, rapport hooks, and which of your experiences to emphasize</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+
+				<h3>Career Development</h3>
+				<div class="card" data-tags="llm" data-num="187">
+					<span class="num">#187</span>
+					<p>Generate word-for-word salary negotiation scripts with fallback language for when the employer pushes back</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="188">
+					<span class="num">#188</span>
+					<p>Map transferable skills to a new career field with a translation table — what you've done, how it applies, and the new industry's language for it</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="189">
+					<span class="num">#189</span>
+					<p>Draft personalized cold outreach messages for networking that reference recipients' recent work without sounding templated</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="190">
+					<span class="num">#190</span>
+					<p>Transform a year's worth of notes and project logs into a structured self-review with quantified achievements for your performance review</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="191">
+					<span class="num">#191</span>
+					<p>Describe a tense workplace situation and get diplomatic responses, reframed perspectives, and de-escalation language</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="192">
+					<span class="num">#192</span>
+					<p>Paste a target role's job description and get a personalized upskilling roadmap with courses, projects, and milestones</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+			</section>
+
+			<!-- PRODUCTIVITY -->
+			<section id="productivity">
+				<h2>⚡ Productivity & Office</h2>
+				<div class="card" data-tags="voice llm auto" data-num="193">
+					<span class="num">#193</span>
+					<p>Record meetings and auto-generate summaries with action items, owners, deadlines, and decisions — sent to attendees within minutes</p>
+					<div class="tags"><span class="badge badge-voice">Voice AI</span><span class="badge badge-llm">LLM</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+				<div class="card" data-tags="llm auto" data-num="194">
+					<span class="num">#194</span>
+					<p>AI-triage your inbox by classifying emails (urgent, FYI, requires response, delegate), then draft context-aware replies in your writing style</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="195">
+					<span class="num">#195</span>
+					<p>Generate first drafts of memos, SOPs, project briefs, or internal announcements from a few bullet points</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm code" data-num="196">
+					<span class="num">#196</span>
+					<p>Describe what you need in plain English and get the exact Excel/Google Sheets formula with an explanation of how it works</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-code">Code AI</span></div>
+				</div>
+				<div class="card" data-tags="llm code" data-num="197">
+					<span class="num">#197</span>
+					<p>Paste raw CSV data or survey responses and get patterns, outliers, and key takeaways in a written narrative — not just charts</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-code">Code AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="198">
+					<span class="num">#198</span>
+					<p>Dump your entire to-do list and get Eisenhower matrix prioritization, time estimates, dependency mapping, and an optimized daily schedule</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm code" data-num="199">
+					<span class="num">#199</span>
+					<p>Feed raw data and KPIs to generate polished weekly/monthly status reports for stakeholders with executive summaries</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-code">Code AI</span></div>
+				</div>
+				<div class="card" data-tags="llm voice" data-num="200">
+					<span class="num">#200</span>
+					<p>Walk through a process verbally and have AI produce a clean step-by-step SOP with numbered instructions and decision trees</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="201">
+					<span class="num">#201</span>
+					<p>Translate workplace documents, client communications, or product copy into multiple languages while preserving tone and industry terminology</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="202">
+					<span class="num">#202</span>
+					<p>Upload scattered team documents, wikis, and threads to an AI workspace, then ask natural-language questions to get instant answers</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+			</section>
+
+			<!-- BUSINESS -->
+			<section id="business">
+				<h2>🏢 Business & Entrepreneurship</h2>
+				<div class="card" data-tags="llm" data-num="203">
+					<span class="num">#203</span>
+					<p>Generate a full first-draft business plan — executive summary, market analysis, financial projections, operational plan — from a one-paragraph idea</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="204">
+					<span class="num">#204</span>
+					<p>Conduct rapid market sizing and trend analysis by synthesizing publicly available data and industry reports into a structured overview</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="205">
+					<span class="num">#205</span>
+					<p>Paste competitor websites and pricing into AI for a side-by-side feature matrix, positioning map, and gap analysis</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm code" data-num="206">
+					<span class="num">#206</span>
+					<p>Generate a 3-year revenue projection spreadsheet with assumptions, unit economics, and sensitivity analysis for different scenarios</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-code">Code AI</span></div>
+				</div>
+				<div class="card" data-tags="llm image" data-num="207">
+					<span class="num">#207</span>
+					<p>Turn your business plan into a compelling investor pitch deck with narrative arc, data visualizations, and objection-anticipating slides</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm search" data-num="208">
+					<span class="num">#208</span>
+					<p>Brainstorm business or product names with brand attributes, then check domain availability and potential trademark conflicts</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="209">
+					<span class="num">#209</span>
+					<p>Run a stress-test SWOT analysis with AI playing devil's advocate, probing weaknesses and threats you haven't considered</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="210">
+					<span class="num">#210</span>
+					<p>Build detailed customer personas from your data — demographics, pain points, goals, objections, and buying triggers</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="211">
+					<span class="num">#211</span>
+					<p>Model different pricing strategies (value-based, tiered, freemium) with pros/cons and projected margins</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="212">
+					<span class="num">#212</span>
+					<p>Simulate customer interviews by having AI role-play as target segments reacting to your concept — surfacing objections and feature requests</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="voice auto" data-num="213">
+					<span class="num">#213</span>
+					<p>Deploy a 24/7 AI phone receptionist that answers calls, captures leads, books appointments, and updates your CRM after hours</p>
+					<div class="tags"><span class="badge badge-voice">Voice AI</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+			</section>
+
+			<!-- FREELANCE -->
+			<section id="freelance">
+				<h2>🤝 Freelance & Consulting</h2>
+				<div class="card" data-tags="llm" data-num="214">
+					<span class="num">#214</span>
+					<p>Generate customized project proposals with scope, timeline, milestones, deliverables, and pricing from a client brief or RFP</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="215">
+					<span class="num">#215</span>
+					<p>Draft polite-but-firm emails for awkward freelancer situations: scope creep pushback, late payment reminders, rate increases</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm code image" data-num="216">
+					<span class="num">#216</span>
+					<p>Create a professional portfolio website in minutes with project descriptions, case study copy, and testimonial layout</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-code">Code AI</span><span class="badge badge-image">Image AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="217">
+					<span class="num">#217</span>
+					<p>Generate detailed project quotes with line items, estimated hours, pricing justification, and good/better/best tier options</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="218">
+					<span class="num">#218</span>
+					<p>Generate a first-draft freelance contract covering scope, payment terms, revision limits, IP ownership, and kill fees</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm search auto" data-num="219">
+					<span class="num">#219</span>
+					<p>Research prospects matching your ideal client profile, draft personalized outreach sequences, and suggest best channels and timing</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="220">
+					<span class="num">#220</span>
+					<p>Turn project experiences into thought-leadership case studies and industry commentary that attracts inbound leads</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="221">
+					<span class="num">#221</span>
+					<p>Create professional client welcome packets with questionnaires, process overviews, timeline expectations, and communication guidelines</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm auto" data-num="222">
+					<span class="num">#222</span>
+					<p>Generate professional invoices, track billable hours from project notes, and automate follow-up reminders for outstanding payments</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+			</section>
+
+			<!-- MARKETING -->
+			<section id="marketing">
+				<h2>📣 Marketing & Sales</h2>
+				<div class="card" data-tags="llm" data-num="223">
+					<span class="num">#223</span>
+					<p>Generate dozens of ad copy variations across platforms (Google, Meta, LinkedIn) from a single creative brief — different hooks, CTAs, lengths, and emotional angles</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm auto" data-num="224">
+					<span class="num">#224</span>
+					<p>Build complete email sequences (welcome, nurture, re-engagement) with subject line variations, send timing, and A/B test suggestions</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+				<div class="card" data-tags="llm code" data-num="225">
+					<span class="num">#225</span>
+					<p>Generate high-converting landing page copy (headlines, benefits, social proof, CTAs), then build the page with no-code AI tools</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-code">Code AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="226">
+					<span class="num">#226</span>
+					<p>Map the full customer journey with touchpoints, emotional states, drop-off risks, and intervention opportunities at each stage</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm code" data-num="227">
+					<span class="num">#227</span>
+					<p>Generate headline, CTA, and layout variations for split testing — then analyze results and recommend the statistically significant winner</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-code">Code AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="228">
+					<span class="num">#228</span>
+					<p>Develop a documented brand voice guide by feeding AI your existing best content and extracting patterns in tone, vocabulary, and emotion</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="video llm music" data-num="229">
+					<span class="num">#229</span>
+					<p>Create short-form marketing videos from a text script — AI generates visuals, captions, and music in platform-ready formats</p>
+					<div class="tags"><span class="badge badge-video">Video AI</span><span class="badge badge-llm">LLM</span><span class="badge badge-music">Music AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="230">
+					<span class="num">#230</span>
+					<p>Write product descriptions at scale for an entire e-commerce catalog using product specs, audience, and brand voice guidelines</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm auto" data-num="231">
+					<span class="num">#231</span>
+					<p>Draft thoughtful, on-brand responses to online reviews at scale — addressing specific feedback in both positive and negative reviews</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="232">
+					<span class="num">#232</span>
+					<p>Generate sales objection battle cards with responses, reframes, and evidence points for your sales team</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+			</section>
+
+			<!-- LEGAL HR -->
+			<section id="legal-hr">
+				<h2>⚖️ Legal, HR & Operations</h2>
+				<div class="card" data-tags="llm" data-num="233">
+					<span class="num">#233</span>
+					<p>Paste a vendor contract, lease, or agreement and get a plain-English summary of key terms, obligations, risks, and red-flag clauses</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="234">
+					<span class="num">#234</span>
+					<p>Generate a first-draft privacy policy, terms of service, or cookie consent notice tailored to your business and jurisdictions</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="235">
+					<span class="num">#235</span>
+					<p>Create a comprehensive employee handbook draft covering PTO, remote work, conduct, and benefits — customized to your company size and state</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm auto" data-num="236">
+					<span class="num">#236</span>
+					<p>Build a complete new-hire onboarding program: day-by-day schedules, training checklists, welcome emails, and role-specific learning paths</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="237">
+					<span class="num">#237</span>
+					<p>Turn informal tribal knowledge into structured SOPs, compliance checklists, and quality control documents</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="238">
+					<span class="num">#238</span>
+					<p>Write inclusive job descriptions, then screen incoming resumes against criteria and generate structured interview question sets</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm" data-num="239">
+					<span class="num">#239</span>
+					<p>Draft measured responses to customer complaints, vendor disputes, or internal grievances with appropriate tone and resolution pathways</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm code" data-num="240">
+					<span class="num">#240</span>
+					<p>Analyze sales data and seasonality to generate demand forecasts, reorder point recommendations, and inventory optimization suggestions</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-code">Code AI</span></div>
+				</div>
+			</section>
+
+			<!-- VIBE CODING -->
+			<section id="vibe-coding">
+				<h2>💻 Vibe Coding</h2>
+				<p class="section-intro"><em>"Vibe coding" means building real software using AI coding tools (Cursor, Replit, Lovable, Bolt, Claude, v0) by describing what you want in plain language — no programming experience needed. Andrej Karpathy coined the term in 2025, and by 2026 it has fundamentally changed who can build software.</em></p>
+
+				<h3>Personal Tools</h3>
+				<div class="card" data-tags="code llm" data-num="241">
+					<span class="num">#241</span>
+					<p>Build a personal habit tracker app with streaks, daily reminders, and progress charts</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="242">
+					<span class="num">#242</span>
+					<p>Create a personal finance dashboard that categorizes spending, visualizes trends, and flags unusual expenses from uploaded bank CSVs</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="243">
+					<span class="num">#243</span>
+					<p>Build a home project calculator — plywood cutting optimizer, paint estimator, tile layout planner — for DIY projects</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="244">
+					<span class="num">#244</span>
+					<p>Create a personal reading/media tracker that logs books, podcasts, and movies with ratings, notes, and recommendations</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="245">
+					<span class="num">#245</span>
+					<p>Build a family chore scheduler with rotating assignments, reminders, and a gamified leaderboard</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="246">
+					<span class="num">#246</span>
+					<p>Create a subscription tracker that monitors all recurring payments, alerts before renewals, and shows total costs</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="247">
+					<span class="num">#247</span>
+					<p>Build a personal journaling app with mood tracking, AI reflection prompts, and sentiment trend visualization</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="248">
+					<span class="num">#248</span>
+					<p>Create a custom meal planner app tailored to your dietary needs and fitness goals</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Business Tools</h3>
+				<div class="card" data-tags="code llm" data-num="249">
+					<span class="num">#249</span>
+					<p>Build a client booking and scheduling system with automated confirmations and calendar sync for your small business</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="250">
+					<span class="num">#250</span>
+					<p>Create a lightweight custom CRM to track leads, deals, follow-ups, and client notes — without paying for Salesforce</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="251">
+					<span class="num">#251</span>
+					<p>Build an inventory management dashboard with low-stock alerts, reorder triggers, and visual stock tracking</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="252">
+					<span class="num">#252</span>
+					<p>Create a client portal where customers log in, view project status, download deliverables, and submit requests</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="253">
+					<span class="num">#253</span>
+					<p>Build a branded invoice and estimate generator with PDF export and payment tracking</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="254">
+					<span class="num">#254</span>
+					<p>Create a project management dashboard with Gantt charts, milestones, progress bars, and team assignments</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="255">
+					<span class="num">#255</span>
+					<p>Build a service quoting tool that lets clients configure options and get instant price estimates (for contractors, cleaners, photographers)</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm search" data-num="256">
+					<span class="num">#256</span>
+					<p>Create an internal knowledge base or SOP wiki where your team can search and reference company procedures</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="257">
+					<span class="num">#257</span>
+					<p>Build a customer feedback collection tool that gathers reviews, runs sentiment analysis, and surfaces key themes</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="258">
+					<span class="num">#258</span>
+					<p>Create an employee onboarding checklist app that guides new hires through required steps, documents, and training</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Websites</h3>
+				<div class="card" data-tags="code llm" data-num="259">
+					<span class="num">#259</span>
+					<p>Build a portfolio website with interactive project showcases and an embedded AI chatbot that answers questions about your work</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="260">
+					<span class="num">#260</span>
+					<p>Create a landing page with an interactive lead magnet tool (ROI calculator, savings estimator, SEO scorer) that captures emails</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="261">
+					<span class="num">#261</span>
+					<p>Build a membership site with gated content, user accounts, and subscription payments via Stripe</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="262">
+					<span class="num">#262</span>
+					<p>Create a niche directory or marketplace (local service providers, freelancers, venues) with search, filters, and listing submissions</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="263">
+					<span class="num">#263</span>
+					<p>Build an event or community website with RSVP functionality, schedules, speaker profiles, and registration</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="264">
+					<span class="num">#264</span>
+					<p>Create a local business website with online ordering/booking, menu display, photo gallery, and maps integration</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="265">
+					<span class="num">#265</span>
+					<p>Build a digital product storefront to sell templates, guides, or courses with checkout and download delivery</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Automations</h3>
+				<div class="card" data-tags="code llm search" data-num="266">
+					<span class="num">#266</span>
+					<p>Build a competitor price monitoring scraper that checks websites daily and alerts you when prices change</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="code llm auto" data-num="267">
+					<span class="num">#267</span>
+					<p>Create a custom email automation that sends personalized follow-up sequences triggered by user actions (sign-ups, purchases, abandons)</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+				<div class="card" data-tags="code llm auto" data-num="268">
+					<span class="num">#268</span>
+					<p>Build a social media content scheduler and auto-poster that queues posts, optimizes timing, and cross-posts across platforms</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+				<div class="card" data-tags="code llm search" data-num="269">
+					<span class="num">#269</span>
+					<p>Create a monitoring tool for job boards, rental listings, or product drops that notifies you instantly when matching criteria appear</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="270">
+					<span class="num">#270</span>
+					<p>Build a custom chatbot for your website that answers FAQs, qualifies leads, and books appointments using your business data</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm auto" data-num="271">
+					<span class="num">#271</span>
+					<p>Create an automated content pipeline: RSS feeds → AI summary → curated newsletter, published on schedule</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="272">
+					<span class="num">#272</span>
+					<p>Build a Slack or Discord bot that answers team questions from company docs, summarizes threads, and tracks action items</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="273">
+					<span class="num">#273</span>
+					<p>Create an automated resume/application screener that scores candidates against your requirements and ranks them</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Monetization & Side Hustles</h3>
+				<div class="card" data-tags="code llm" data-num="274">
+					<span class="num">#274</span>
+					<p>Build and launch a niche micro-SaaS tool (invoice generator, content calendar, client checklist) and sell subscriptions at $5–15/month</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="275">
+					<span class="num">#275</span>
+					<p>Create a browser extension that solves a specific workflow problem and monetize with freemium pricing</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="276">
+					<span class="num">#276</span>
+					<p>Build simple mobile utility apps (niche calculators, local travel guides, meditation timers) and monetize through ads or small purchases</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="277">
+					<span class="num">#277</span>
+					<p>Create interactive lead-generation calculators (ROI estimator, savings tool) and sell them as done-for-you assets to businesses for $300–$1,000 each</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="278">
+					<span class="num">#278</span>
+					<p>Build custom internal tools (dashboards, trackers, workflow apps) for local businesses as a service — charge $500–$2,000 per build plus monthly maintenance</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm search" data-num="279">
+					<span class="num">#279</span>
+					<p>Create a niche affiliate directory or comparison tool that earns through affiliate links</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="280">
+					<span class="num">#280</span>
+					<p>Build and sell website templates, app templates, or connected app kits that other non-coders can customize</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="281">
+					<span class="num">#281</span>
+					<p>Create AI chatbots for local businesses (real estate agents, dentists, salons) and charge setup fees plus monthly subscriptions</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="282">
+					<span class="num">#282</span>
+					<p>Build a rapid MVP for a startup idea over a weekend, validate with real users, then grow it or flip it on acquisition marketplaces</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="283">
+					<span class="num">#283</span>
+					<p>Launch a "vibe coding as a service" freelance business — offer live-build sessions where you co-create custom tools with clients using AI</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+
+				<h3>Data & Analysis</h3>
+				<div class="card" data-tags="code llm" data-num="284">
+					<span class="num">#284</span>
+					<p>Build a CSV upload tool that auto-generates interactive dashboards with charts, filters, and summaries — no SQL or BI tools needed</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="285">
+					<span class="num">#285</span>
+					<p>Create a sales or marketing performance dashboard pulling data from Google Sheets and visualizing revenue trends and conversion funnels</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="286">
+					<span class="num">#286</span>
+					<p>Build a survey and feedback analysis tool that collects responses, runs sentiment analysis, and generates visual reports</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="287">
+					<span class="num">#287</span>
+					<p>Create an automated report generator that takes raw data and produces formatted PDF/HTML reports with AI-written summaries</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="288">
+					<span class="num">#288</span>
+					<p>Build a KPI tracker connecting to your data sources with real-time metrics and anomaly alerts</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="code llm search" data-num="289">
+					<span class="num">#289</span>
+					<p>Create a competitive intelligence dashboard that aggregates public data about competitors (pricing, features, reviews, social mentions)</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span><span class="badge badge-search">Search AI</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="290">
+					<span class="num">#290</span>
+					<p>Build a plain-English data exploration tool that lets non-technical team members ask questions about company data and get instant charts</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+			</section>
+
+			<!-- AUTOMATION -->
+			<section id="automation">
+				<h2>🤖 Automation (No-Code Platforms)</h2>
+				<p class="section-intro"><em>Using AI automation platforms like Zapier AI, Make, and n8n to orchestrate workflows across thousands of apps — no coding or vibe coding required.</em></p>
+				<div class="card" data-tags="auto llm" data-num="291">
+					<span class="num">#291</span>
+					<p>Set up an automated lead management pipeline: form submissions → CRM entry → AI quality scoring → personalized email sequences → Slack notification</p>
+					<div class="tags"><span class="badge badge-auto">Automation AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="auto llm" data-num="292">
+					<span class="num">#292</span>
+					<p>Create multi-channel customer support automation: incoming messages auto-classified by intent, routed to the right team, with AI-drafted response suggestions</p>
+					<div class="tags"><span class="badge badge-auto">Automation AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="auto llm" data-num="293">
+					<span class="num">#293</span>
+					<p>Build an automated content repurposing workflow: publish a blog post → AI generates social captions, newsletter copy, and thread summaries → schedules across platforms</p>
+					<div class="tags"><span class="badge badge-auto">Automation AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="auto llm voice" data-num="294">
+					<span class="num">#294</span>
+					<p>Set up meeting intelligence automation: recordings auto-transcribe → AI extracts action items → updates project management tool → sends summary emails</p>
+					<div class="tags"><span class="badge badge-auto">Automation AI</span><span class="badge badge-llm">LLM</span><span class="badge badge-voice">Voice AI</span></div>
+				</div>
+				<div class="card" data-tags="auto llm" data-num="295">
+					<span class="num">#295</span>
+					<p>Create financial operations automation: invoices from email auto-extracted → categorized → entered into accounting → flagged for approval with anomaly detection</p>
+					<div class="tags"><span class="badge badge-auto">Automation AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="auto llm" data-num="296">
+					<span class="num">#296</span>
+					<p>Build a personal productivity automation stack: 200+ small compounding automations (auto-file emails, auto-draft replies, auto-log tasks) that save hours weekly</p>
+					<div class="tags"><span class="badge badge-auto">Automation AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+			</section>
+
+			<!-- EMERGING -->
+			<section id="emerging">
+				<h2>🌍 Emerging & Cross-Domain Use Cases</h2>
+				<div class="card" data-tags="llm" data-num="297">
+					<span class="num">#297</span>
+					<p>Use AI to simulate customer training scenarios — train new support agents on realistic interactions using your actual chat log patterns, no real customers at risk</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm code" data-num="298">
+					<span class="num">#298</span>
+					<p>Have AI generate interactive training quizzes and games for employee education on company policies — complete with scoring, streaks, and certificates</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-code">Code AI</span></div>
+				</div>
+				<div class="card" data-tags="code llm" data-num="299">
+					<span class="num">#299</span>
+					<p>Build "software for one" — hyper-personalized apps so niche only you need them (a cocktail recipe generator for bottles on your shelf, a custom travel planning tool for your friend group, a scoring app for your niche hobby)</p>
+					<div class="tags"><span class="badge badge-code">Code AI</span><span class="badge badge-llm">LLM</span></div>
+				</div>
+				<div class="card" data-tags="llm voice code auto" data-num="300">
+					<span class="num">#300</span>
+					<p>Create a full personal AI productivity system by combining multiple tools: voice AI captures ideas → LLM organizes and prioritizes → automation tools distribute tasks → code AI builds custom dashboards — a compounding ecosystem where each piece amplifies the others</p>
+					<div class="tags"><span class="badge badge-llm">LLM</span><span class="badge badge-voice">Voice AI</span><span class="badge badge-code">Code AI</span><span class="badge badge-auto">Automation AI</span></div>
+				</div>
+			</section>
+
+			</div><!-- end #use-cases -->
+
+			<div class="back-to-top">
+				<a href="#top">↑ Back to top</a>
+			</div>
+
+		</main>
+		<Footer />
+
+		<style>
+			.use-cases-page {
+				width: 900px;
+				max-width: calc(100% - 2em);
+			}
+
+			.hero {
+				text-align: center;
+				margin-bottom: 2em;
+				padding-bottom: 1.5em;
+				border-bottom: 2px solid rgb(var(--gray-light));
+			}
+
+			.hero h1 {
+				font-size: 2.5em;
+				margin-bottom: 0.1em;
+				background: linear-gradient(135deg, var(--accent), #6366f1);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			.subtitle {
+				font-size: 1.3em;
+				color: rgb(var(--gray));
+				margin-top: 0;
+			}
+
+			.intro {
+				font-size: 1em;
+				max-width: 650px;
+				margin: 0 auto;
+				color: rgb(var(--gray-dark));
+			}
+
+			.ai-type-key {
+				background: rgba(var(--gray-light), 0.5);
+				border-radius: 12px;
+				padding: 1em 1.5em;
+				margin-bottom: 1.5em;
+				font-size: 0.85em;
+				line-height: 2.2;
+			}
+
+			.ai-type-key h3 {
+				margin-bottom: 0.5em;
+				font-size: 1em;
+			}
+
+			.controls {
+				position: sticky;
+				top: 0;
+				background: white;
+				padding: 1em 0;
+				z-index: 10;
+				border-bottom: 1px solid rgb(var(--gray-light));
+				margin-bottom: 1em;
+			}
+
+			#search {
+				width: 100%;
+				padding: 0.75em 1em;
+				font-size: 1em;
+				border: 2px solid rgb(var(--gray-light));
+				border-radius: 10px;
+				outline: none;
+				transition: border-color 0.2s;
+				box-sizing: border-box;
+			}
+
+			#search:focus {
+				border-color: var(--accent);
+			}
+
+			.filter-row {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.4em;
+				margin-top: 0.75em;
+			}
+
+			.filter-btn {
+				padding: 0.35em 0.75em;
+				border: 1.5px solid rgb(var(--gray-light));
+				border-radius: 20px;
+				background: white;
+				cursor: pointer;
+				font-size: 0.8em;
+				transition: all 0.2s;
+				font-family: inherit;
+			}
+
+			.filter-btn:hover {
+				border-color: var(--accent);
+				color: var(--accent);
+			}
+
+			.filter-btn.active {
+				background: var(--accent);
+				color: white;
+				border-color: var(--accent);
+			}
+
+			.category-nav {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.4em;
+				margin-bottom: 1.5em;
+				font-size: 0.8em;
+				line-height: 2;
+			}
+
+			.category-nav strong {
+				width: 100%;
+			}
+
+			.category-nav a {
+				padding: 0.2em 0.6em;
+				background: rgba(var(--gray-light), 0.5);
+				border-radius: 6px;
+				text-decoration: none;
+				color: rgb(var(--gray-dark));
+				white-space: nowrap;
+			}
+
+			.category-nav a:hover {
+				background: var(--accent);
+				color: white;
+			}
+
+			.results-count {
+				font-size: 0.85em;
+				color: rgb(var(--gray));
+				margin-bottom: 1em;
+				min-height: 1.5em;
+			}
+
+			section {
+				margin-bottom: 2.5em;
+			}
+
+			section h2 {
+				font-size: 1.6em;
+				padding-bottom: 0.3em;
+				border-bottom: 2px solid rgb(var(--gray-light));
+				margin-bottom: 0.75em;
+			}
+
+			section h3 {
+				font-size: 1.1em;
+				color: rgb(var(--gray));
+				margin: 1.2em 0 0.5em;
+			}
+
+			.section-intro {
+				font-size: 0.9em;
+				color: rgb(var(--gray));
+				margin-bottom: 1em;
+			}
+
+			.card {
+				background: white;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 10px;
+				padding: 0.75em 1em;
+				margin-bottom: 0.5em;
+				transition: all 0.2s;
+			}
+
+			.card:hover {
+				border-color: var(--accent);
+				box-shadow: 0 2px 12px rgba(var(--gray), 15%);
+			}
+
+			.card.hidden {
+				display: none;
+			}
+
+			.num {
+				font-weight: 700;
+				color: var(--accent);
+				font-size: 0.85em;
+			}
+
+			.card p {
+				margin: 0.3em 0 0.5em;
+				line-height: 1.5;
+				font-size: 0.95em;
+			}
+
+			.tags {
+				display: flex;
+				gap: 0.3em;
+				flex-wrap: wrap;
+			}
+
+			.badge {
+				display: inline-block;
+				padding: 0.15em 0.5em;
+				border-radius: 12px;
+				font-size: 0.7em;
+				font-weight: 600;
+				white-space: nowrap;
+			}
+
+			.badge-llm { background: #dbeafe; color: #1d4ed8; }
+			.badge-image { background: #fce7f3; color: #be185d; }
+			.badge-voice { background: #d1fae5; color: #065f46; }
+			.badge-video { background: #ede9fe; color: #6d28d9; }
+			.badge-music { background: #fef3c7; color: #92400e; }
+			.badge-code { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+			.badge-search { background: #fff7ed; color: #9a3412; }
+			.badge-auto { background: #f0f9ff; color: #0369a1; }
+
+			.back-to-top {
+				text-align: center;
+				margin: 2em 0;
+			}
+
+			.back-to-top a {
+				padding: 0.5em 1.5em;
+				background: var(--accent);
+				color: white;
+				border-radius: 20px;
+				text-decoration: none;
+				font-size: 0.9em;
+			}
+
+			@media (max-width: 720px) {
+				.hero h1 {
+					font-size: 1.8em;
+				}
+				.subtitle {
+					font-size: 1em;
+				}
+				.use-cases-page {
+					width: 100%;
+				}
+			}
+		</style>
+
+		<script>
+			const search = document.getElementById('search');
+			const cards = document.querySelectorAll('.card');
+			const filterBtns = document.querySelectorAll('.filter-btn');
+			const sections = document.querySelectorAll('section');
+			const resultsCount = document.getElementById('results-count');
+			let activeFilter = 'all';
+
+			function applyFilters() {
+				const query = search.value.toLowerCase().trim();
+				let visible = 0;
+
+				cards.forEach(card => {
+					const text = card.textContent.toLowerCase();
+					const tags = card.dataset.tags;
+					const matchesSearch = !query || text.includes(query);
+					const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+					const show = matchesSearch && matchesFilter;
+					card.classList.toggle('hidden', !show);
+					if (show) visible++;
+				});
+
+				// Hide empty sections
+				sections.forEach(sec => {
+					const visibleCards = sec.querySelectorAll('.card:not(.hidden)');
+					sec.style.display = visibleCards.length ? '' : 'none';
+				});
+
+				if (query || activeFilter !== 'all') {
+					resultsCount.textContent = `Showing ${visible} of 300 use cases`;
+				} else {
+					resultsCount.textContent = '';
+				}
+			}
+
+			search.addEventListener('input', applyFilters);
+
+			filterBtns.forEach(btn => {
+				btn.addEventListener('click', () => {
+					filterBtns.forEach(b => b.classList.remove('active'));
+					btn.classList.add('active');
+					activeFilter = btn.dataset.filter;
+					applyFilters();
+				});
+			});
+		</script>
+	</body>
+</html>
