@@ -381,6 +381,135 @@
     text-align: center;
   }
 
+  /* ── INFO BUTTON & MODAL ────────────────────────────── */
+  .info-btn {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: #888;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .info-btn:hover {
+    border-color: #a78bfa;
+    color: #a78bfa;
+    background: rgba(167,139,250,0.08);
+  }
+
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .modal-overlay.open {
+    display: flex;
+  }
+
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+  }
+
+  .modal h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  .modal .modal-sub {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+    transition: color 0.15s;
+  }
+
+  .modal-close:hover { color: #fff; }
+
+  .ai-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ai-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #e8e8ee;
+    transition: all 0.15s;
+  }
+
+  .ai-link:hover {
+    border-color: #a78bfa;
+    background: rgba(167,139,250,0.06);
+  }
+
+  .ai-link-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .ai-link-org {
+    font-size: 0.75rem;
+    color: #666;
+    font-weight: 300;
+  }
+
+  .ai-link-arrow {
+    color: #555;
+    font-size: 0.9rem;
+    transition: transform 0.15s;
+  }
+
+  .ai-link:hover .ai-link-arrow {
+    transform: translateX(3px);
+    color: #a78bfa;
+  }
+
   /* ── MOBILE ─────────────────────────────────────────── */
   @media (max-width: 600px) {
     body {
@@ -416,6 +545,48 @@
 </style>
 </head>
 <body>
+
+<!-- INFO BUTTON -->
+<button class="info-btn" onclick="document.getElementById('aiModal').classList.add('open')" title="Kur lietot promptus?">🤖</button>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="aiModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('aiModal').classList.remove('open')">✕</button>
+    <h2>Kur lietot promptus?</h2>
+    <p class="modal-sub">Šos promptus var izmantot jebkurā AI čatā. Populārākie:</p>
+    <div class="ai-links">
+      <a class="ai-link" href="https://chatgpt.com/" target="_blank">
+        <div><span class="ai-link-name">ChatGPT</span><br><span class="ai-link-org">OpenAI</span></div>
+        <span class="ai-link-arrow">→</span>
+      </a>
+      <a class="ai-link" href="https://claude.ai" target="_blank">
+        <div><span class="ai-link-name">Claude AI</span><br><span class="ai-link-org">Anthropic</span></div>
+        <span class="ai-link-arrow">→</span>
+      </a>
+      <a class="ai-link" href="https://gemini.google.com/app" target="_blank">
+        <div><span class="ai-link-name">Gemini</span><br><span class="ai-link-org">Google</span></div>
+        <span class="ai-link-arrow">→</span>
+      </a>
+      <a class="ai-link" href="https://grok.com/" target="_blank">
+        <div><span class="ai-link-name">Grok</span><br><span class="ai-link-org">xAI / Elon Musk</span></div>
+        <span class="ai-link-arrow">→</span>
+      </a>
+      <a class="ai-link" href="https://www.perplexity.ai" target="_blank">
+        <div><span class="ai-link-name">Perplexity AI</span><br><span class="ai-link-org">Perplexity</span></div>
+        <span class="ai-link-arrow">→</span>
+      </a>
+      <a class="ai-link" href="https://chat.deepseek.com/" target="_blank">
+        <div><span class="ai-link-name">DeepSeek AI</span><br><span class="ai-link-org">Ķīna</span></div>
+        <span class="ai-link-arrow">→</span>
+      </a>
+      <a class="ai-link" href="https://chat.mistral.ai/" target="_blank">
+        <div><span class="ai-link-name">Mistral</span><br><span class="ai-link-org">Eiropa</span></div>
+        <span class="ai-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 <header>
   <h1>Prompta Anatomija</h1>
