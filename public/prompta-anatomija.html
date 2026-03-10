@@ -387,14 +387,14 @@
     top: 16px;
     right: 16px;
     z-index: 100;
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
+    border-radius: 10px;
+    padding: 8px 14px;
     border: 1px solid var(--border);
     background: var(--surface);
     color: #888;
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -547,7 +547,7 @@
 <body>
 
 <!-- INFO BUTTON -->
-<button class="info-btn" onclick="document.getElementById('aiModal').classList.add('open')" title="Kur lietot promptus?">🤖</button>
+<button class="info-btn" onclick="document.getElementById('aiModal').classList.add('open')" title="Kur lietot promptus?">AI čati</button>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="aiModal" onclick="if(event.target===this)this.classList.remove('open')">
