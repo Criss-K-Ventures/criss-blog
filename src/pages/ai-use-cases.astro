@@ -1893,12 +1893,17 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 				top: 1em;
 				width: 200px;
 				flex-shrink: 0;
+				max-height: calc(100vh - 2em);
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
 			}
 
 			.sidebar-inner {
 				display: flex;
 				flex-direction: column;
 				gap: 0.6em;
+				overflow: hidden;
 			}
 
 			.main-content {
@@ -1954,6 +1959,9 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 				flex-direction: column;
 				gap: 0.15em;
 				font-size: 0.75em;
+				overflow-y: auto;
+				flex: 1;
+				min-height: 0;
 			}
 
 			.category-nav-sidebar strong {
@@ -2010,7 +2018,7 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 
 			section h3 {
 				font-size: 1.1em;
-				color: rgb(var(--gray));
+				color: rgb(var(--black));
 				margin: 1.2em 0 0.5em;
 			}
 
