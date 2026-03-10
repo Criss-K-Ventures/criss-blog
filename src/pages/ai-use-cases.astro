@@ -37,7 +37,9 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 				</div>
 			</div>
 
-			<div class="controls">
+			<div class="page-layout">
+			<aside class="sidebar">
+				<div class="sidebar-inner">
 				<input type="text" id="search" placeholder="🔍 Search use cases..." autocomplete="off" />
 				<div class="filter-row">
 					<button class="filter-btn active" data-filter="all">All (300)</button>
@@ -50,9 +52,8 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 					<button class="filter-btn" data-filter="search">Search AI</button>
 					<button class="filter-btn" data-filter="auto">Automation AI</button>
 				</div>
-			</div>
-
-			<div class="category-nav">
+				<div class="results-count" id="results-count"></div>
+				<div class="category-nav-sidebar">
 				<strong>Jump to:</strong>
 				<a href="#home">🏠 Home</a>
 				<a href="#parenting">👨‍👩‍👧‍👦 Parenting</a>
@@ -77,10 +78,11 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 				<a href="#vibe-coding">💻 Vibe Coding</a>
 				<a href="#automation">🤖 Automation</a>
 				<a href="#emerging">🌍 Emerging</a>
-			</div>
+				</div>
+				</div>
+			</aside>
 
-			<div class="results-count" id="results-count"></div>
-
+			<div class="main-content">
 			<div id="use-cases">
 
 			<!-- HOME & DAILY LIFE -->
@@ -1821,6 +1823,8 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 			</section>
 
 			</div><!-- end #use-cases -->
+			</div><!-- end .main-content -->
+			</div><!-- end .page-layout -->
 
 			<div class="back-to-top">
 				<a href="#top">↑ Back to top</a>
@@ -1831,7 +1835,7 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 
 		<style>
 			.use-cases-page {
-				width: 900px;
+				width: 1100px;
 				max-width: calc(100% - 2em);
 			}
 
@@ -1878,22 +1882,36 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 				font-size: 1em;
 			}
 
-			.controls {
+			.page-layout {
+				display: flex;
+				gap: 1.5em;
+				align-items: flex-start;
+			}
+
+			.sidebar {
 				position: sticky;
-				top: 0;
-				background: white;
-				padding: 1em 0;
-				z-index: 10;
-				border-bottom: 1px solid rgb(var(--gray-light));
-				margin-bottom: 1em;
+				top: 1em;
+				width: 200px;
+				flex-shrink: 0;
+			}
+
+			.sidebar-inner {
+				display: flex;
+				flex-direction: column;
+				gap: 0.6em;
+			}
+
+			.main-content {
+				flex: 1;
+				min-width: 0;
 			}
 
 			#search {
 				width: 100%;
-				padding: 0.75em 1em;
-				font-size: 1em;
+				padding: 0.5em 0.6em;
+				font-size: 0.85em;
 				border: 2px solid rgb(var(--gray-light));
-				border-radius: 10px;
+				border-radius: 8px;
 				outline: none;
 				transition: border-color 0.2s;
 				box-sizing: border-box;
@@ -1906,17 +1924,16 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 			.filter-row {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 0.4em;
-				margin-top: 0.75em;
+				gap: 0.3em;
 			}
 
 			.filter-btn {
-				padding: 0.35em 0.75em;
+				padding: 0.25em 0.55em;
 				border: 1.5px solid rgb(var(--gray-light));
-				border-radius: 20px;
+				border-radius: 16px;
 				background: white;
 				cursor: pointer;
-				font-size: 0.8em;
+				font-size: 0.7em;
 				transition: all 0.2s;
 				font-family: inherit;
 			}
@@ -1932,38 +1949,52 @@ const description = "A comprehensive collection of 300 practical AI use cases yo
 				border-color: var(--accent);
 			}
 
-			.category-nav {
+			.category-nav-sidebar {
 				display: flex;
-				flex-wrap: wrap;
-				gap: 0.4em;
-				margin-bottom: 1.5em;
-				font-size: 0.8em;
-				line-height: 2;
+				flex-direction: column;
+				gap: 0.15em;
+				font-size: 0.75em;
 			}
 
-			.category-nav strong {
-				width: 100%;
+			.category-nav-sidebar strong {
+				margin-bottom: 0.2em;
 			}
 
-			.category-nav a {
-				padding: 0.2em 0.6em;
+			.category-nav-sidebar a {
+				padding: 0.2em 0.4em;
 				background: rgba(var(--gray-light), 0.5);
-				border-radius: 6px;
+				border-radius: 5px;
 				text-decoration: none;
 				color: rgb(var(--gray-dark));
 				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 
-			.category-nav a:hover {
+			.category-nav-sidebar a:hover {
 				background: var(--accent);
 				color: white;
 			}
 
 			.results-count {
-				font-size: 0.85em;
+				font-size: 0.75em;
 				color: rgb(var(--gray));
-				margin-bottom: 1em;
-				min-height: 1.5em;
+				min-height: 1.2em;
+			}
+
+			@media (max-width: 900px) {
+				.page-layout {
+					flex-direction: column;
+				}
+				.sidebar {
+					position: static;
+					width: 100%;
+				}
+				.category-nav-sidebar {
+					flex-direction: row;
+					flex-wrap: wrap;
+					gap: 0.3em;
+				}
 			}
 
 			section {
